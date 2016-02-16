@@ -123,5 +123,6 @@ items_set = process_properties(property_list)
 print len(items_set)
 d = walk_through_items(items_set)
 save_to_csv(d)
+# 
 
 
