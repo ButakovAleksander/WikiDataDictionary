@@ -1,8 +1,18 @@
 # -*- coding: utf-8 -*-
 
+from __future__ import unicode_literals
 import urllib2
 import json
 import codecs
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf8')
+
+def load_properties_list():
+
+    with codecs.open("PROPERTIES_dict.txt", "r", "utf8") as properties_json:
+        return json.loads(properties_json.read())
 
 
 def load_from_property(property_code):
@@ -37,10 +47,21 @@ def load_from_property(property_code):
         return items_list
 
 
-def process_properties(property_list):
+# def process_properties(property_list):
+#
+#     items_set = []
+#     for property_code in property_list:
+#         print property_code
+#         items_list = load_from_property(property_code)
+#         items_set += items_list
+#
+#     return set(items_set)
+
+
+def iterate_properties(properties_dict, semantics, subsemantics):
 
     items_set = []
-    for property_code in property_list:
+    for property_code in properties_dict[semantics][subsemantics]:
         print property_code
         items_list = load_from_property(property_code)
         items_set += items_list
@@ -103,6 +124,7 @@ def walk_through_items(items_list):
 
     return all_entities
 
+
 def save_to_csv(entities_list):
 
     with codecs.open(r'entities.csv', 'w', 'utf8') as outfile:
@@ -117,12 +139,14 @@ def save_to_csv(entities_list):
                 for descr in entity[2]:
                     outfile.write(descr[1]+'\n')
 
-property_list = ['P489', 'P498']
 
-items_set = process_properties(property_list)
-print len(items_set)
-d = walk_through_items(items_set)
-save_to_csv(d)
-# 
+properties_dict = load_properties_list()
+i = iterate_properties(properties_dict, "Геоназвания", "Локации (город, страна)")
+
+# property_list = ['P19']
+# items_set = process_properties(property_list)
+# print len(items_set)
+# d = walk_through_items(items_set)
+# save_to_csv(d)
 
 

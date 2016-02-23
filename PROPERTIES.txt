@@ -1,0 +1,400 @@
+ГЕОНАЗВАНИЯ
+
+---Локации
+
+place of birth	P19	Item	place of birth: the most specific known (e.g. city instead of country, or hospital instead of city)
+place of death	P20	Item	place of death: the most specific known (e.g. city instead of country, or hospital instead of city)
+place of burial	P119	Item	burial and grave: location of grave, resting place, place of ash-scattering, etc, (e.g. town/city or cemetery) for a person
+country of citizenship	P27	Item	citizenship: the object is a country that recognizes the subject as its citizen
+headquarters location	P159	Item	headquarters, siege social and seat: specific location where an organization's HQ is or has been situated
+location of formation	P740	Item	location where a group or organization was formed
+licensed to broadcast to	P1408	Item	city of license: place that a radio/TV station is licensed/required to broadcast to
+location	P276	Item	geographic location: location the item, physical object or event is within
+contains settlement	P1383	Item	settlement which an administrative division contains
+interchange station	P833	Item	station to which passengers can transfer to from this station, normally without extra expense
+
+-- резиденции правителей
+official residence	P263	Item	the residence at which heads of government and other senior figures officially reside
+
+--порты
+home port	P504	Item	home port: home port of the vessel (if different from "ship registry")
+port of registry	P532	Item	ship's port of registry. This is generally painted on the ship's stern (for the "home port", see Property:P504)
+
+--континенты
+continent	P30	Item	continent of which the subject is a part.
+
+--тип государственности
+country	P17	Item	sovereign state of this item
+
+--административные территории
+located in the administrative territorial entity	P131	Item	the item is located on the territory of the following administrative entity
+
+--временная зона
+located in time zone	P421	Item	time zone for this item
+
+--моря/океаны/острова
+located on terrain feature	P706	Item	located on the specified landform or body of water
+
+--название улицы
+located on street	P669	Item	street, or road, where the item is located.
+
+-столица
+capital	P36	Item	location (city, municipality) of governmental seat of the country, or administrative territorial entity
+
+--реки/дороги/озера
+crosses	obstacle (body of water, road, ...)	P177	Item	which this bridge crosses over or this tunnel goes under
+mouth of the watercourse	P403	Item	the body of water to which the watercourse drains
+lakes on river	P469	Item	lakes and reservoirs the river flows through, flows into or flows out of
+lake inflows	P200	Item	major inflow sources — rivers, aquifers, glacial runoff, etc. Some terms may not be place names, e.g. none
+lake outflow	P201	Item	rivers and other outflows waterway names. If evaporation or seepage are notable outflows, they may be included
+located next to body of water	P206	Item	sea, lake or river
+
+
+
+ЛЮДИ
+
+---Национальность
+
+ethnic group	P172	Item	ethnic group: subject's ethnicity (consensus is that a VERY high standard of proof is needed for this field to be used. In general this means 1) the subject claims it him/herself, or 2) it is widely agreed on by scholars, or 3) is fictional and portrayed as such).
+
+--- ориентация
+sexual orientation	P91	Item	sexual orientation: the sexual orientation of the person - use IF AND ONLY IF they have stated it themselves, unambiguously, or it has been widely agreed upon by historians after their death
+
+-- профессия
+occupation	P106	Item	occupation: occupation of a person; see also "field of work" (Property:P101)
+
+
+-- должность
+position held	P39	Item	mandate: subject currently or formerly holds the object position or public office
+manager/director	P1037	Item	person who manages any kind of group
+position played on team / speciality	P413	Item	position: position or specialism of a player on a team, e.g. Small Forward
+
+-- статус канонизации
+canonization status	P411	Item	canonization status: stage in the process of attaining sainthood per the subject's religious organization.
+
+-- тип голоса
+voice type	P412	Item	voice type: person's voice type. expected values: soprano, mezzo-soprano, contralto, countertenor, tenor, baritone, bass (and derivatives)
+
+-- титул
+noble title	P97	Item	royal or noble rank: titles held by the person
+military rank	P410	Item	military rank: military rank achieved by a person (should usually have a "start date" qualifier)
+
+-- префикс обращения
+honorific prefix	P511	Item	honorific and title of honor: word or expression used before a name, in addressing or referring to a person
+
+--академическая степень
+academic degree	P512	Item	academic degree: academic degree that the person holds
+
+-- постфикс обращения
+honorific suffix	P1035	Item	honorific: word or expression with connotations conveying esteem or respect when used, after a name, in addressing or referring to a person
+
+РЕЛИГИЯ
+
+religion	P140	Item	religion of a person or organization (MUST be claimed by the subject or documented by historical sources)
+"Религия": {"монашеский орден":["P611",8428],"диоцез":["P708",9899],"религия или цивилизация":["P1049",382]}
+
+
+
+ГРУППА ЛИЦ
+commander of	P598	Item	for persons who are notable as commanding officers, the units they commanded
+
+
+МУЗЫКАЛЬНЫЙ ИНСТРУМЕНТ
+instrument	P1303	Item	musical instrument: instrument that a person plays
+
+
+ОРГАНИЗАЦИИ
+
+-- другие организации
+member of	P463	Item	member: part of a specific organization or club. Do not use for membership in ethnic or social groups, nor for holding a position such as a member of parliament (use P39 for that).
+affiliation	P1416	Item	organization that a person is affiliated with
+separated from	P807	Item	subject was founded or started by separating from identified object
+chief executive officer	P169	Item	chief executive officer: highest-ranking corporate officer appointed as the CEO within an organization
+business division	P199	Item	division: divisions of this organization
+represents organisation	P1268	Item	organization: organization that an entity represents
+
+-- образоват. учрежд.
+educated at	P69	Item	Alma mater: educational institution attended by the subject
+
+-- фирмы/производство
+employer	P108	Item	employer: organization for which the subject works or worked
+manufacturer	P176	Item	manufacturer: manufacturer or producer of this product
+
+
+--программное обеспечение
+developer	P178	Item	software developer: organisation or person that developed this item
+
+
+-- политич. партия
+member of political party	P102	Item	political party: the political party of which this politician is or has been a member
+political alignment	P1387	Item	political position within the political spectrum
+plaintiff	P1620	Item	plaintiff: the party who initiates a lawsuit
+
+--спортивные клубы/фиры
+member of sports team	P54	Item	sports team: sports teams or clubs that the subject currently represents or formerly represented
+
+--альянсы
+airline alliance	P114	Item	airline alliance: the alliance the airline belongs to
+
+--аэропорты
+airline hub	P113	Item	airline hub: airport that serves as a hub for an airline
+
+--стадионы
+home venue	P115	Item	stadium: home stadium or venue of a sports team or applicable performing arts organization
+
+--спортивная лига
+league	P118	Item	sports league: league in which the team plays or has played in
+
+--военное подразделение
+military branch	P241	Item	military branch: the branch to which this military unit, award, or person belongs, e.g. Royal Navy
+
+--юридическая форма организации
+legal form	P1454	Item	type of business entity: legal form of an organization
+
+--издательство
+publisher	P123	Item	publisher: organization responsible for publishing books, periodicals or software
+
+--звукозаписывающая организация
+record label	P264	Item	record label: brand and trademark associated with the marketing of subject music recordings and music videos
+
+--фирма-производитель фильмов
+production company	P272	Item	production company: company that produced this film, audio or performing arts work
+
+--контрольный орган
+language regulatory body	P1018	Item	regulatory body of a language
+
+--Финансовое учреждение
+central bank	P1304	Item	country's central bank
+
+--законодательный орган
+legislative body	P194	Item	legislative body governing this entity; political institution with elected representatives, such as a parliament/legislature or council
+
+
+ОТРАСЛИ ЭКОНОМИКИ
+industry	P452	Item	industry: industry of company or organization
+
+
+ПРОДУКЦИЯ
+product	P1056	Item	product: material or product produced by a business, industry, facility, or processs
+
+
+ЯЗЫКИ
+
+native language	P103	Item	first language: language that a person learned natively
+languages spoken or written	P1412	Item	language(s) that a person speaks or writes. Can include native languages
+has dialect	P134	Item	dialect: dialects of this language (a single language may be linked to many dialects)
+writing system	P282	Item	writing system: alphabet, character set or other system of writing used by subject language
+programming language	P277	Item	programming language: the programming language(s) in which the software is developed
+official language	P37	Item	language designated as official by this item
+
+
+МЕРОПРИЯТИЯ
+
+-- названия праздников
+feast day	P841	Item	saint's principal feast day
+public holiday	P832	Item	public holiday: official public holiday that occurs in this place in its honor, usually a non-working day
+
+--другие мероприятия
+participant of	P1344	Item	event a person or an organization was a participant in, inverse of P710 or P1923
+
+
+ДЕЯТЕЛЬНОСТЬ
+
+-- сфера деятельности
+field of work	P101	Item	field of work: fields of work related to this item (physics, history). For occupation like physicist, historian see P106. Note: Can be used in any item, including person
+
+-- космическая миссия
+astronaut mission	P450	Item	spaceflight: space mission that the subject is or has been a member of (do not include future missions)
+
+-- ранговая система в спорте/играх
+dan/kyu rank	P468	Item	rank system used in several board games (e.g. go, shogi, renju), martial arts (e.g. judo, kendo, wushu) and some other games
+
+-- преступление
+convicted of	P1399	Item	crime a person was convicted of
+charge	P1595	Item	offence with which someone is charged, at a trial
+
+--войны
+conflict	P607	Item	war and battle: battles, wars or engagements in which the person or item participated
+
+--биолог.процесс
+regulates (molecular biology)	P128	Item	process regulated by a protein or RNA in molecular biology
+route of administration	P636	Item	route of administration: path by which a drug, fluid, poison, or other substance is taken into the body
+
+--действие
+takeoff and landing capability	P1956	Item	takeoff and landing: type of takeoff and landing the aircraft is designed to operate
+
+--взаимодействие элементов
+interaction	P517	Item	with which of the 4 fundamental forces does the particle interact
+
+
+ДОКУМЕНТЫ
+
+-- Произведения
+notable work	P800	Item	work and magnum opus: subject's notable scientific work or work of art
+title	P1476	Item	Monolingual text	title and original title: original title of a work, such as a newspaper article
+present in work	P1441	Item	work in which this fictional entity (Q14897293) is present. See also P:1080 for in-universe information
+
+
+-- Названия стилей
+architectural style	P149	Item	architectural style: architectural style of a structure or architect
+genre	P136	Item	genre: genre of a creative work or genre in which an artist works
+
+--названия периодики
+published in	P1433	Item	larger work that a given work was published in
+
+
+
+ВЕЩЕСТВО/МАТЕРИАЛ
+material used	P186	Item	material: material the subject is made of or derived from
+EC classification	P660	Item	the Enzyme Commission (EC)-based accepted name of any enzyme classifications of the protein or RNA molecule
+point group	P589	Item	Item	point group: crystal subdivision
+decays to	P816	Item	what isotope does this radioactive isotope decay to
+coolant	P588	Item	substance used by the subject to dissipate excess thermal energy
+
+
+
+БОЛЕЗНЬ
+DiseasesDB	P557	Item	String	Diseases Database: identifier sourced on the Diseases Database
+cause of death	P509	Item	cause of death: underlying or immediate cause of death
+
+
+
+ЖИВОТНЫЕ
+pet	P1429	Item	pet: pet that a person owns
+number	P303	Item	String	breed identification number per the EE list of the breeds of fancy pigeons (ELFP)
+World Register of Marine Species identifier	P850	String	World Register of Marine Species: identifier in the World Register of Marine Species
+basionym	P566	Item	basionym: the legitimate, previously published name on which a new combination or name at new rank is based
+
+
+РАСТЕНИЯ
+Flora of North America taxon ID	P1727	Item	String	Flora of North America: identifier of a taxon in Flora of North America
+Flora of China ID	P1747	Item	String	Flora of China: identifier of a taxon in Flora of the People's Republic of China
+
+
+НАГРАДЫ
+
+award received	P166	Item	award: award or recognition received by a person, organisation or creative work
+
+
+ТАЛИСМАН
+mascot	P822	Item	mascot character: mascot of an organization, e.g. a sports team or university
+
+
+
+ВАЛЮТА
+currency symbol description	P489	Item	currency symbol: item with description of currency symbol
+ISO 4217 code	P498	Item	String	ISO 4217: identifier for a currency per ISO 4217
+
+
+ИМЯ ТАКСОНА БИОЛОГИЯ
+
+--
+taxon name	P225	Item	String	taxon name: correct scientific name of a taxon (according to the reference given)
+parent taxon	P171	Item	taxon: parent taxon of the taxon in question
+taxonomic type	P427	Item	type: the type genus of this family (or subfamily, etc), or the type species of this genus (or subgenus, etc)
+
+--функции
+neurological function	P970	Item	the function of a neurological structure
+
+
+НАУКА
+original spelling	P1353	Item	String	original spelling of a scientific name
+field of this profession	P425	Item	activity corresponding to this occupation
+"Астрономия" : {"созвездие":["P59", 20093], "P65":["место астрономического открытия", 45835], "классификация малой планеты":["P196", 90390], "спектральный класс":["P215", 7843], "морфологический тип галактики":["P223", 2386], "астрономическое тело":["P376", 3925], "астрономическое тело2":["P397",1083], "астрономическое тело-потомок":["P398", 366], "метод обнаружения экзопланеты":["P1046", 184], "тип передаваемого сигнала":["P1170", 4]}
+
+--Стратиграфия
+interleaves with	P514	stratigraphic relation in which two units overlap each other marginally
+
+
+ИСТОЧНИК ЭНЕРГИИ
+source of energy	P618	Item	describes the source of energy an animated object (machine or animal) uses
+fuel system	P1211	Item	fuel system	fuel system that an engine uses
+
+
+
+ЕДИНИЦА ИЗМЕРЕНИЯ
+measured physical quantity	P111	Item	physical property measured by a unit
+
+
+ТРАНСПОРТ
+
+--корабли
+vessel class	P289	Item	vessel class: vessel classification (e.g. Nelson-class battleship)
+
+--космич.корабли
+space launch vehicle	P375	Item	launch vehicle: rocket or other vehicle for launching subject payload into space
+
+
+
+УСТРОЙСТВО
+undercarriage	P1637	Item	landing gear: type of aircraft landing gear the item is equipped with
+supercharger	P1210	Item	supercharger or turbocharger used by an engine
+
+
+ВРЕМЯ/ОТРЕЗОК
+temporal range start	P523	Item	the start of a process or appearance of a life form relative to the geologic time scale
+temporal range end	P524	Item	the end of a process or extinction of a life form relative to the geologic time scale
+
+
+КАЧЕСТВО/ХАРАКТЕРИСТИКА
+approximation	P1171	Item	algorithm	method used to approximate a number
+
+
+ФОРМА ПРАВЛЕНИЯ
+basic form of government	P122	Item	the subject's government
+
+
+
+ДРУГОЕ
+
+--тип кристаллической решетки
+crystal system	P556	Item	type of crystal for minerals and/or for crystal coumpounds
+fracturing	P538	Item	fracture (mineralogy): type of fracture a crystal or mineral forms
+
+--операционная система
+operating system	P306	Item	operating system: operating system (OS) on which a software works; OS installed on hardware
+
+--игровой режим
+game mode	P404	Item	game mode: available playing mode(s) in a video game
+
+--тип орбиты косм.корабля
+type of orbit	P522	Item	orbit: orbit a satellite has around its central body
+
+--тип астероида
+asteroid spectral type	P720	Item	asteroid spectral type: spectral classifications of asteroids based on spectral shape, color, and albedo
+
+--флаги стран
+flag	P163	Item	subject's flag
+
+--печати стран
+seal description	P418	Item	description of a subject's seal
+
+
+ИМЕНА ЛЮДЕЙ (ФИ)
+
+doctoral advisor	P184	Item	doctoral advisor: person who supervised the doctorate or PhD thesis of the subject
+doctoral student	P185	Item	doctoral student(s) of a professor
+student of	P1066	Item	teacher: person who has taught this person
+student	P802	Item	student: notable student(s) of a person
+family name	P734	Item	family name: surname or last name of a person
+given name	P735	Item	given name: first name or another given name of this person
+father	P22	Item	father: male parent
+mother	P25	Item	mother: female parent
+brother	P7	Item	brother: subject has the object as their brother
+sister	P9	Item	sister: subject has the object as their sister (female sibling)
+spouse	P26	Item	spouse: the subject has the object as their spouse (husband, wife, partner, etc.)
+partner	P451	Item	someone with whom the person is in a relationship without being married
+child	P40	Item	child: subject has the object as their biological offspring
+stepfather	P43	Item	stepfather: husband of the subject's mother, who is not the subject's biological father
+stepmother	P44	Item	stepmother: wife of the subject's father, who is not the subject's biological mother
+relative	P1038	Item	kinship: family member (qualify with "type of kinship"
+godparent	P1290	Item	godparent: person who is the godparent of a given person
+name in native language	P1559	Item	Monolingual text	name: name of a person in their native language
+founder	P112	Item	founder or co-founder of this organization, religion or place
+screenwriter	P58	Item	screenwriter: author(s) of the screenplay or script for this work
+executive producer	P1431	Item	executive producer: executive producer of a movie or TV show
+director of photography	P344	Item	cinematographer: person responsible for the framing, lighting and filtration of the subject work
+composer	P86	Item	composer: person(s) who wrote the music; also use P676 for lyricist
+patron saint	P417	Item	patron saint adopted by the subject
+head of state	P35	Item	official with the highest formal authority in a country
+head of government	P6	Item	head of the executive power of a town, city, municipality, state, country, or other governmental body
