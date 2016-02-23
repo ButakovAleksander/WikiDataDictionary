@@ -30,8 +30,8 @@ def load_from_property(property_code):
     else:
 
         blcontinue = entities_json["continue"]["blcontinue"]
-        bool = "continue" in entities_json
-        while bool:
+        bool_sign = "continue" in entities_json
+        while bool_sign:
 
             request_for_entities = "https://www.wikidata.org/w/api.php?action=query&list=backlinks&blnamespace=0&" \
                                    "bllimit=500&bltitle=Property:"+property_code+"&blcontinue="+blcontinue+"&format=json"
@@ -40,36 +40,25 @@ def load_from_property(property_code):
             for item in entities_json["query"]["backlinks"]:
                 items_list.append(item["title"])
 
-            bool = "continue" in entities_json
-            if bool:
+            bool_sign = "continue" in entities_json
+            if bool_sign:
                 blcontinue = entities_json["continue"]["blcontinue"]
 
         return items_list
-
-
-# def process_properties(property_list):
-#
-#     items_set = []
-#     for property_code in property_list:
-#         print property_code
-#         items_list = load_from_property(property_code)
-#         items_set += items_list
-#
-#     return set(items_set)
 
 
 def iterate_properties(properties_dict, semantics, subsemantics):
 
     items_set = []
     for property_code in properties_dict[semantics][subsemantics]:
-        print property_code
+        print(property_code)
         items_list = load_from_property(property_code)
         items_set += items_list
 
     return set(items_set)
 
 
-def assign_value_to_item(item):
+def assign_entity_to_item(item):
 
     languages = "ru|en|de|fr|it|fi|es|pt|ja|zh-hans"
     request_for_item = "https://www.wikidata.org/w/api.php?action=wbgetentities&props=labels|aliases|descriptions&" \
@@ -114,12 +103,33 @@ def assign_value_to_item(item):
     return entity_data
 
 
-def walk_through_items(items_list):
+def enter_range(items_set):
+
+    print "Выбранная семантика (подсемантика) содержит", len(items_set), "сущностей."
+    print "Выберите, сколько сущностей Вы хотите получить:"
+    print
+
+    while True:
+        lower_edge = input("Введите число, с которого начать выводить сущности: ")
+        upper_edge = input("Введите число, которым следует закончить вывод сущностей: ")
+        if isinstance(lower_edge, int) and isinstance(upper_edge, int):
+            if lower_edge > upper_edge:
+                return upper_edge, lower_edge
+                break
+            else:
+                return lower_edge, upper_edge
+                break
+        else:
+            print("Введите число")
+
+
+def walk_through_items(items_set, lower_edge=0, upper_edge=500):
 
     all_entities = []
-    for item in items_list:
-        print item
-        entity = assign_value_to_item(item)
+    items_list = list(items_set)
+    for item in items_list[lower_edge:upper_edge]:
+        print(item)
+        entity = assign_entity_to_item(item)
         all_entities.append(entity)
 
     return all_entities
@@ -141,12 +151,7 @@ def save_to_csv(entities_list):
 
 
 properties_dict = load_properties_list()
-i = iterate_properties(properties_dict, "Геоназвания", "Локации (город, страна)")
-
-# property_list = ['P19']
-# items_set = process_properties(property_list)
-# print len(items_set)
-# d = walk_through_items(items_set)
-# save_to_csv(d)
-
-
+items_set = iterate_properties(properties_dict, "Награды", "Награды")
+lower_edge, upper_edge = enter_range(items_set)
+entities = walk_through_items(items_set, lower_edge, upper_edge)
+save_to_csv(entities)
